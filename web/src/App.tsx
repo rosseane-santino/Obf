@@ -485,30 +485,13 @@ export default function App() {
                 <FileCode2 className="size-5" />
               </div>
               <div>
-                <h1 className="text-lg font-semibold leading-tight">Prometheus Playground</h1>
+                <h1 className="text-lg font-semibold leading-tight">Zkush</h1>
                 <p className="text-xs text-muted-foreground">
-                  In-browser Lua obfuscation powered by Prometheus by levno-710.
+                  Lua obfuscation
                 </p>
               </div>
             </div>
-            <div className="flex items-center gap-2 text-sm">
-              <span className="text-xs text-muted-foreground">If you like this tool, leave a star on</span>
-              <a
-                href="https://github.com/prometheus-lua/Prometheus"
-                target="_blank"
-                rel="noreferrer"
-                className="inline-flex items-center gap-2 rounded-md border bg-background px-3 py-1.5 text-xs font-medium text-foreground transition-colors hover:bg-accent hover:text-accent-foreground"
-              >
-                GitHub
-                <Github className="size-3.5" />
-              </a>
-              <a
-                href={docsHref}
-                className="inline-flex items-center gap-2 rounded-md border bg-background px-3 py-1.5 text-xs font-medium text-foreground transition-colors hover:bg-accent hover:text-accent-foreground"
-              >
-                Docs
-                <BookText className="size-3.5" />
-              </a>
+        
               <Button onClick={isObfuscating ? stopCurrentJob : () => void obfuscate()} disabled={isBusy && !isObfuscating} className="min-w-32">
                 {isObfuscating ? <Loader2 className="animate-spin" /> : <Play />}
                 {isObfuscating ? "Stop" : "Obfuscate"}
